@@ -67,26 +67,27 @@ print("=" * 60)
 # ════════════════════════════════════════════════════════════
 print("\n--- Section 1: Python Basics ---")
 
-# ── 1A. Variables & Output [10 pts] ───────────────────────
-# Create three variables:
-#   student_name  (string)  : your first name
-#   student_grade (integer) : your grade level (9, 10, 11, or 12)
-#   favorite_topic (string) : "Python" or "Cybersecurity"
-# Then print: "Hi, I'm [name], a grade [grade] student who loves [topic]!"
-
-# YOUR CODE HERE
+student_name = "Blake"
+print(f"{student_name}")
+student_grade = int(input("9, 10, 11, 12: "))
+favorite_topic = ("cybersecurity")  
+print(f"Hi, im {student_name} im in {student_grade} who loves {favorite_topic}")
 
 
-# ── 1B. Grade Calculator [16 pts] ────────────────────────
-# Write a function called letter_grade(score) that takes a
-# numeric score (0-100) and returns the letter grade:
-#   A = 90-100  |  B = 80-89  |  C = 70-79  |  D = 60-69  |  F = <60
 
-def letter_grade(score):
-    # YOUR CODE HERE
-    pass
+def letter_grade(score):  
+    if score >= 90-100: 
+        return 'A'
+    elif score >= 80-89:
+        return 'B'
+    elif score >= 70-79:
+        return 'C'
+    elif score >= 60-69:
+        return 'D'
+    else:
+        return 'F'
+pass
 
-# Test your function (do not change these lines)
 test_scores = [100, 88, 73, 61, 45]
 for s in test_scores:
     print(f"  Score {s} -> {letter_grade(s)}")
@@ -112,9 +113,7 @@ threats = ["phishing", "malware", "ransomware", "spyware", "DDoS"]
 print("\n--- Section 2: File I/O ---")
 
 # ── 2A. Write a File [20 pts] ────────────────────────────
-# Create a file called "cyber_glossary.txt" and write the
-# following 5 terms and definitions into it, one per line:
-#
+# Create a file called "cyber_glossary.txt" and write thew
 #   Malware: Software designed to harm a computer or steal data.
 #   Phishing: A fake message that tricks you into revealing information.
 #   Encryption: Scrambling data so only authorized people can read it.
